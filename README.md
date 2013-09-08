@@ -1,1 +1,9 @@
-# Barebone, mobile-first Wordpress theme for development with SASS/Compass/Susy
+# Ardicus - Bare-bone wordpress theme
+
+## Made for development with SASS/Compass/Susy
+
+Uses:
+
+* SASS
+* Compass
+* SUSY
