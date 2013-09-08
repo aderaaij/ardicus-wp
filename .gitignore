@@ -185,6 +185,9 @@ $RECYCLE.BIN/
 # Sass cache
 .sass-cache
 
+#sublime ftp config file
+sftp-config.json
+
 #############
 ## Python
 #############
