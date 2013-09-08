@@ -35,10 +35,10 @@ function ardicus_setup() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'ardicus' ) );
 
 	/** 
-	 * add custom editor style located in root (editor-style.css)
+	 * add custom editor style
 	 * http://codex.wordpress.org/Function_Reference/add_editor_style
 	 */
-	add_editor_style();
+	add_editor_style( 'css/editor-style.css');
 
 	/* Register post thumbnail support
 	 *
