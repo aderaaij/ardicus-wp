@@ -1,0 +1,48 @@
+// Magic (Responsive) Susy Grid System
+// http://susy.oddbird.net/guides/reference/
+
+// $show-grid-backgrounds: true;
+// Define mobile-first grid constants.
+
+$total-columns      : 6;
+
+// You can use ems, px or % to define the grid.
+
+$column-width       : 64px;
+$gutter-width       : 20px;
+$grid-padding       : $gutter-width / 2;
+
+// Uncomment to make the grid fluid (w/ a max-width)
+// $container-style: fluid
+// .container
+//   max-width: 1380px
+
+// Define breakpoints, in this case when there's room for the specified columns.
+$break-landscape: 6;
+$break-tablet:   8;
+$break-desktop: 12;
+$break-large: 16;
+
+.container {
+	// Include `container` if this element will contain a grid system.
+	@include container($total-columns);
+	// Apply our grid background stripes for development.
+	@include susy-grid-background;
+}
+
+// Automatically reset the grid width & re-apply the grid background
+// to responsive layouts.
+$layouts: $break-landscape, $break-tablet, $break-desktop,$break-large;
+@each $layout in $layouts {
+	@include at-breakpoint($layout) {
+		.container {
+			@include set-container-width;
+			@include susy-grid-background;
+		}
+	}
+}
+
+@include at-breakpoint($break-landscape) {}
+@include at-breakpoint($break-tablet) {}
+@include at-breakpoint($break-desktop) {}
+@include at-breakpoint($break-large) {}
