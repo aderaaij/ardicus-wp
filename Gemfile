@@ -6,4 +6,3 @@ gem 'compass'
 gem 'compass-normalize'
 
 gem 'compass-h5bp', "~> 0.1.1" # HTML5 Boilerplate styles
-gem "wdm", "~> 0.1.0"
